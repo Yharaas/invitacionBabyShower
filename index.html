@@ -15,7 +15,7 @@
             padding: 0;
         }
         .container {
-            max-width: 100%;
+            max-width: 600px;
             margin: auto;
             background: #FFF7E7;
             padding: 20px;
@@ -76,12 +76,6 @@
             background-color: #6e8447; /* Hover color */
             transform: scale(1.1); /* Slightly increase size on hover */
         }
-        .button-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap; /* Allow wrapping */
-            margin-top: 10px;
-        }
         .button {
             background-color: #6e8447;
             color: white;
@@ -89,12 +83,10 @@
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
-            margin: 5px; /* Margin between buttons */
+            margin: 10px 5px; /* Adjusted margin */
             font-size: 18px; /* Tamaño del texto */
             font-family: 'Montserrat', sans-serif; /* Tipografía */
             transition: background-color 0.3s, transform 0.3s;
-            flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
-            max-width: 100px; /* Max width for buttons */
         }
         .button:hover {
             background-color: #a1d4ef;
@@ -113,12 +105,11 @@
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
+            margin: 10px 5px; /* Adjusted margin */
             cursor: pointer;
             font-size: 18px; /* Tamaño del texto */
             font-family: 'Montserrat', sans-serif; /* Tipografía */
             transition: background-color 0.3s, transform 0.3s;
-            flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
-            max-width: 100px; /* Max width for buttons */
         }
         #music-control:hover {
             background-color: #a1d4ef;
@@ -138,20 +129,18 @@
                     <span id="minutes">0 m</span>
                     <span id="seconds">0 s</span>
                 </div>
-                <div class="button-container">
-                    <a href="https://maps.app.goo.gl/rtEfCyKKuDK8vsGAA" class="button">Ver Ubicación</a>
-                    <a href="https://wa.link/4qudud" class="button">Confirmar Asistencia</a>
-                    <button id="music-control" onclick="toggleMusic()">Reproducir Música</button>
-                </div>
+                <a href="https://maps.app.goo.gl/rtEfCyKKuDK8vsGAA" class="button">Ver Ubicación</a>
+                <a href="https://wa.link/4qudud" class="button">Confirmar Asistencia</a>
+                <button id="music-control" onclick="toggleMusic()">Reproducir Música</button>
             </div>
-            <img src="images/Invitación.jpg" alt="Invitación" class="dinosaur-img">
+            <img src="Invitacion.jpg" alt="Invitación" class="dinosaur-img">
         </div>
         <div class="footer">
         </div>
     </div>
 
     <!-- Agregar música de fondo -->
-    <audio id="bg-music" src="Tarzán - En Mi Corazón Vivirás.mp3" autoplay loop></audio>
+    <audio id="bg-music" src="ChristinaPerri_AThousandYears.mp3" autoplay loop></audio>
 
     <script>
         // Cuenta regresiva
