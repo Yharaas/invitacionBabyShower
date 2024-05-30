@@ -76,6 +76,11 @@
             background-color: #6e8447; /* Hover color */
             transform: scale(1.1); /* Slightly increase size on hover */
         }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
         .button {
             background-color: #6e8447;
             color: white;
@@ -83,7 +88,6 @@
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
-            margin: 10px 5px; /* Adjusted margin */
             font-size: 18px; /* Tamaño del texto */
             font-family: 'Montserrat', sans-serif; /* Tipografía */
             transition: background-color 0.3s, transform 0.3s;
@@ -105,7 +109,6 @@
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
-            margin: 10px 5px; /* Adjusted margin */
             cursor: pointer;
             font-size: 18px; /* Tamaño del texto */
             font-family: 'Montserrat', sans-serif; /* Tipografía */
@@ -129,18 +132,20 @@
                     <span id="minutes">0 m</span>
                     <span id="seconds">0 s</span>
                 </div>
-                <a href="https://maps.app.goo.gl/rtEfCyKKuDK8vsGAA" class="button">Ver Ubicación</a>
-                <a href="https://wa.link/4qudud" class="button">Confirmar Asistencia</a>
-                <button id="music-control" onclick="toggleMusic()">Reproducir Música</button>
+                <div class="button-container">
+                    <a href="https://maps.app.goo.gl/rtEfCyKKuDK8vsGAA" class="button">Ver Ubicación</a>
+                    <a href="https://wa.link/4qudud" class="button">Confirmar Asistencia</a>
+                    <button id="music-control" onclick="toggleMusic()">Reproducir Música</button>
+                </div>
             </div>
-            <img src="Invitacion.jpg" alt="Invitación" class="dinosaur-img">
+            <img src="images/Invitación.jpg" alt="Invitación" class="dinosaur-img">
         </div>
         <div class="footer">
         </div>
     </div>
 
     <!-- Agregar música de fondo -->
-    <audio id="bg-music" src="ChristinaPerri_AThousandYears.mp3" autoplay loop></audio>
+    <audio id="bg-music" src="Tarzán - En Mi Corazón Vivirás.mp3" autoplay loop></audio>
 
     <script>
         // Cuenta regresiva
@@ -182,3 +187,4 @@
     </script>
 </body>
 </html>
+
