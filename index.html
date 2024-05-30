@@ -15,7 +15,7 @@
             padding: 0;
         }
         .container {
-            max-width: 600px;
+            max-width: 100%;
             margin: auto;
             background: #FFF7E7;
             padding: 20px;
@@ -79,6 +79,7 @@
         .button-container {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap; /* Allow wrapping */
             margin-top: 10px;
         }
         .button {
@@ -88,9 +89,12 @@
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
+            margin: 5px; /* Margin between buttons */
             font-size: 18px; /* Tamaño del texto */
             font-family: 'Montserrat', sans-serif; /* Tipografía */
             transition: background-color 0.3s, transform 0.3s;
+            flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+            max-width: 100px; /* Max width for buttons */
         }
         .button:hover {
             background-color: #a1d4ef;
@@ -113,6 +117,8 @@
             font-size: 18px; /* Tamaño del texto */
             font-family: 'Montserrat', sans-serif; /* Tipografía */
             transition: background-color 0.3s, transform 0.3s;
+            flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+            max-width: 100px; /* Max width for buttons */
         }
         #music-control:hover {
             background-color: #a1d4ef;
