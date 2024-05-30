@@ -21,36 +21,38 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            opacity: 0; /* Start invisible */
-            transform: translateY(50px); /* Start 50px down */
-            animation: fadeInSlideUp 1s forwards; /* Animation */
-            position: relative; /* Add this */
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInSlideUp 1s forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         @keyframes fadeInSlideUp {
             to {
-                opacity: 1; /* End fully visible */
-                transform: translateY(0); /* End at original position */
+                opacity: 1;
+                transform: translateY(0);
             }
         }
         .content {
+            width: 100%;
             padding: 20px;
-            position: relative; /* Add this */
         }
         .dinosaur-img {
             max-width: 100%;
             height: auto;
         }
         .content h2 {
-            font-size: 50px; /* Tamaño del texto */
-            font-family: 'Dancing Script', sans-serif; /* Tipografía */
+            font-size: 50px;
+            font-family: 'Dancing Script', sans-serif;
         }
         .content p {
-            font-size: 18px; /* Tamaño del texto */
-            font-family: 'Montserrat', sans-serif; /* Tipografía */
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
         }
         .overlay-content {
             position: absolute; /* Add this */
-            top: 595px; /* Adjust as needed */
+            top: 655px; /* Adjust as needed */
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -59,63 +61,85 @@
         .countdown {
             font-size: 20px;
             margin: 10px 0;
-            font-family: 'Montserrat', sans-serif; /* Tipografía */
+            font-family: 'Montserrat', sans-serif;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         .countdown span {
-            background-color: #6e8447; /* Background color for the squares */
-            color: white; /* Text color */
+            background-color: #6e8447;
+            color: white;
             padding: 10px;
-            margin: 0 5px;
+            margin: 5px;
             border-radius: 5px;
             display: inline-block;
             transition: background-color 0.3s, transform 0.3s;
         }
         .countdown span:hover {
-            background-color: #6e8447; /* Hover color */
-            transform: scale(1.1); /* Slightly increase size on hover */
+            background-color: #6e8447;
+            transform: scale(1.1);
         }
         .button {
-        background-color: #6e8447;
-        color: white;
-        padding: 5px 10px; 
-        text-decoration: none;
-        border-radius: 5px;
-        display: inline-block;
-        margin: 10px 2px; /* Ajustar el margen */
-        font-size: 14px; /* Tamaño del texto reducido */
-        font-family: 'Montserrat', sans-serif; /* Tipografía */
-        transition: background-color 0.3s, transform 0.3s;
-}
+            background-color: #6e8447;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 2px;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .button:hover {
             background-color: #a1d4ef;
             transform: scale(1.1);
         }
         .footer {
-            font-size: 20px; /* Tamaño del texto */
+            font-size: 20px;
             color: #888;
             margin-top: 20px;
-            font-family: 'Montserrat', sans-serif; /* Tipografía */
-         }
+            font-family: 'Montserrat', sans-serif;
+        }
         #music-control {
             background-color: #6e8447;
             color: white;
-            padding: 5px 10px; /* Reducir el padding para hacer los botones más pequeños */
+            padding: 5px 10px;
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
-            margin: 10px 2px; /* Ajustar el margen */
+            margin: 10px 2px;
             cursor: pointer;
-            font-size: 14px; /* Tamaño del texto reducido */
-            font-family: 'Montserrat', sans-serif; /* Tipografía */
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
             transition: background-color 0.3s, transform 0.3s;
-        }
         }
         #music-control:hover {
             background-color: #a1d4ef;
             transform: scale(1.1);
+        }
+
+        /* Media Queries para responsividad */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .content h2 {
+                font-size: 30px;
+            }
+            .content p {
+                font-size: 16px;
+            }
+            .button, #music-control {
+                font-size: 12px;
+                padding: 5px;
+            }
+            .countdown {
+                font-size: 16px;
+            }
+            .countdown span {
+                padding: 5px;
+            }
         }
     </style>
 </head>
@@ -124,6 +148,7 @@
         <div class="header">
         </div>
         <div class="content">
+            <img src="Invitación de Oli.jpg" alt="Invitación" class="dinosaur-img">
             <div class="overlay-content">
                 <div id="countdown" class="countdown">
                     <span id="days">0 d</span>
@@ -135,7 +160,6 @@
                 <a href="https://wa.link/4qudud" class="button">Confirmar Asistencia</a>
                 <button id="music-control" onclick="toggleMusic()">Reproducir Música</button>
             </div>
-            <img src="Invitacion.jpg" alt="Invitación" class="dinosaur-img">
         </div>
         <div class="footer">
         </div>
@@ -184,4 +208,3 @@
     </script>
 </body>
 </html>
-
