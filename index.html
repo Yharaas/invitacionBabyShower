@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación Baby Shower</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Kaushan+Script?classification=Display,Handwriting">
     <style>
         body {
             font-family: 'Dancing Script', Arial, sans-serif;
@@ -40,78 +39,49 @@
             max-width: 100%;
             height: auto;
         }
-        .content h2 {
-            font-size: 50px; /* Tamaño del texto */
-            font-family: 'Dancing Script', sans-serif; /* Tipografía */
-        }
-        .content p {
-            font-size: 18px; /* Tamaño del texto */
-            font-family: 'Montserrat', sans-serif; /* Tipografía */
-        }
         .overlay-content {
-            position: absolute; /* Add this */
-            top: 595px; /* Adjust as needed */
-            left: 50%;
-            transform: translateX(-50%);
+            position: absolute;
+            top: 20px; /* Ajustar posición vertical */
+            left: 0;
+            right: 0;
             text-align: center;
-            width: 100%; /* Ensure it spans the container */
-        }
-        .countdown {
-            font-size: 20px;
-            margin: 10px 0;
-            font-family: 'Montserrat', sans-serif; /* Tipografía */
-            display: flex;
-            justify-content: center;
-        }
-        .countdown span {
-            background-color: #6e8447; /* Background color for the squares */
-            color: white; /* Text color */
-            padding: 10px;
-            margin: 0 5px;
-            border-radius: 5px;
-            display: inline-block;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .countdown span:hover {
-            background-color: #6e8447; /* Hover color */
-            transform: scale(1.1); /* Slightly increase size on hover */
         }
         .button {
-        background-color: #6e8447;
-        color: white;
-        padding: 5px 10px; 
-        text-decoration: none;
-        border-radius: 5px;
-        display: inline-block;
-        margin: 10px 2px; /* Ajustar el margen */
-        font-size: 14px; /* Tamaño del texto reducido */
-        font-family: 'Montserrat', sans-serif; /* Tipografía */
-        transition: background-color 0.3s, transform 0.3s;
-}
+            background-color: #6e8447;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 600px 5px;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s, transform 0.3s;
+            
+
         }
         .button:hover {
             background-color: #a1d4ef;
             transform: scale(1.1);
         }
         .footer {
-            font-size: 20px; /* Tamaño del texto */
+            font-size: 20px;
             color: #888;
             margin-top: 20px;
-            font-family: 'Montserrat', sans-serif; /* Tipografía */
+            font-family: 'Montserrat', sans-serif;
          }
         #music-control {
             background-color: #6e8447;
             color: white;
-            padding: 5px 10px; /* Reducir el padding para hacer los botones más pequeños */
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
-            margin: 10px 2px; /* Ajustar el margen */
+            margin: 10px 5px;
             cursor: pointer;
-            font-size: 14px; /* Tamaño del texto reducido */
-            font-family: 'Montserrat', sans-serif; /* Tipografía */
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
             transition: background-color 0.3s, transform 0.3s;
-        }
         }
         #music-control:hover {
             background-color: #a1d4ef;
@@ -121,24 +91,16 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-        </div>
+        <div class="header"></div>
         <div class="content">
             <div class="overlay-content">
-                <div id="countdown" class="countdown">
-                    <span id="days">0 d</span>
-                    <span id="hours">0 h</span>
-                    <span id="minutes">0 m</span>
-                    <span id="seconds">0 s</span>
-                </div>
                 <a href="https://maps.app.goo.gl/rtEfCyKKuDK8vsGAA" class="button">Ver Ubicación</a>
                 <a href="https://wa.link/4qudud" class="button">Confirmar Asistencia</a>
                 <button id="music-control" onclick="toggleMusic()">Reproducir Música</button>
             </div>
             <img src="Invitacion.jpg" alt="Invitación" class="dinosaur-img">
         </div>
-        <div class="footer">
-        </div>
+        <div class="footer"></div>
     </div>
 
     <!-- Agregar música de fondo -->
@@ -184,4 +146,4 @@
     </script>
 </body>
 </html>
-
+  
