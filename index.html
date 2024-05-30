@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación Baby Shower</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Kaushan+Script?classification=Display,Handwriting">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap">
     <style>
         body {
             font-family: 'Dancing Script', Arial, sans-serif;
@@ -37,10 +37,12 @@
         .content {
             width: 100%;
             padding: 20px;
+            position: relative;
         }
         .dinosaur-img {
             max-width: 100%;
             height: auto;
+            border-radius: 10px;
         }
         .content h2 {
             font-size: 50px;
@@ -51,12 +53,13 @@
             font-family: 'Montserrat', sans-serif;
         }
         .overlay-content {
-            position: absolute; /* Add this */
-            top: 655px; /* Adjust as needed */
+            position: absolute;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
             text-align: center;
-            width: 100%; /* Ensure it spans the container */
+            width: 100%;
+            padding: 10px;
         }
         .countdown {
             font-size: 20px;
@@ -82,11 +85,11 @@
         .button {
             background-color: #6e8447;
             color: white;
-            padding: 5px 10px;
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
-            margin: 10px 2px;
+            margin: 10px 5px;
             font-size: 14px;
             font-family: 'Montserrat', sans-serif;
             transition: background-color 0.3s, transform 0.3s;
@@ -104,11 +107,11 @@
         #music-control {
             background-color: #6e8447;
             color: white;
-            padding: 5px 10px;
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
-            margin: 10px 2px;
+            margin: 10px 5px;
             cursor: pointer;
             font-size: 14px;
             font-family: 'Montserrat', sans-serif;
@@ -132,7 +135,7 @@
             }
             .button, #music-control {
                 font-size: 12px;
-                padding: 5px;
+                padding: 8px 15px;
             }
             .countdown {
                 font-size: 16px;
@@ -141,12 +144,23 @@
                 padding: 5px;
             }
         }
+
+        @media (max-width: 400px) {
+            .content h2 {
+                font-size: 24px;
+            }
+            .button, #music-control {
+                font-size: 10px;
+                padding: 5px 10px;
+            }
+            .countdown {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-        </div>
         <div class="content">
             <img src="Invitacion.jpg" alt="Invitación" class="dinosaur-img">
             <div class="overlay-content">
@@ -162,6 +176,7 @@
             </div>
         </div>
         <div class="footer">
+            ¡Nos vemos pronto!
         </div>
     </div>
 
@@ -187,10 +202,10 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").textContent = `${days} d`;
-            document.getElementById("hours").textContent = `${hours} h`;
-            document.getElementById("minutes").textContent = `${minutes} m`;
-            document.getElementById("seconds").textContent = `${seconds} s`;
+            document.getElementById("days").textContent = ${days} d;
+            document.getElementById("hours").textContent = ${hours} h;
+            document.getElementById("minutes").textContent = ${minutes} m;
+            document.getElementById("seconds").textContent = ${seconds} s;
         }, 1000);
 
         // Controlar la música
