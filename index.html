@@ -54,7 +54,7 @@
         }
         .overlay-content {
             position: absolute;
-            top: 50%;
+            top: 80%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -185,7 +185,7 @@
 
     <script>
         // Cuenta regresiva
-        const eventDate = new Date("Jun 23, 2024 12:00:00").getTime();
+        const eventDate = new Date("Jun 23, 2024 11:30:00").getTime();
 
         const countdownFunction = setInterval(() => {
             const now = new Date().getTime();
@@ -202,10 +202,10 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").textContent = days + d;
-            document.getElementById("hours").textContent = hours + h;
-            document.getElementById("minutes").textContent = minutes + m;
-            document.getElementById("seconds").textContent = seconds + s;
+            document.getElementById("days").textContent = days + " d";
+            document.getElementById("hours").textContent = hours + " h";
+            document.getElementById("minutes").textContent = minutes + " m";
+            document.getElementById("seconds").textContent = seconds + " s";
         }, 1000);
 
         // Controlar la música
