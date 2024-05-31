@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación Baby Shower</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap">
     <style>
         body {
             font-family: 'Dancing Script', Arial, sans-serif;
@@ -16,44 +17,21 @@
         .container {
             max-width: 500px;
             margin: auto;
-            background: #FFF7E7;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInSlideUp 1s forwards;
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        @keyframes fadeInSlideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .content {
-            width: 100%;
-            padding: 20px;
         }
         .dinosaur-img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
         }
-        .overlay-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 100%;
-            padding: 10px;
-        }
         .countdown {
             font-size: 20px;
             margin: 10px 0;
+            font-family: 'Kaushan Script', sans-serif;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -82,6 +60,7 @@
             display: inline-block;
             margin: 10px 5px;
             font-size: 14px;
+            font-family: 'Kaushan Script', sans-serif;
             transition: background-color 0.3s, transform 0.3s;
         }
         .button:hover {
@@ -98,14 +77,13 @@
             margin: 10px 5px;
             cursor: pointer;
             font-size: 14px;
+            font-family: 'Kaushan Script', sans-serif;
             transition: background-color 0.3s, transform 0.3s;
         }
         #music-control:hover {
             background-color: #a1d4ef;
             transform: scale(1.1);
         }
-
-        /* Media Queries para responsividad */
         @media (max-width: 600px) {
             .container {
                 padding: 10px;
@@ -121,7 +99,6 @@
                 padding: 5px;
             }
         }
-
         @media (max-width: 400px) {
             .button, #music-control {
                 font-size: 10px;
@@ -135,51 +112,37 @@
 </head>
 <body>
     <div class="container">
-        <div class="content">
-            <img src="Invitacion.jpg" alt="Invitación" class="dinosaur-img">
-            <div class="overlay-content">
-                <div id="countdown" class="countdown">
-                    <span id="days">0 d</span>
-                    <span id="hours">0 h</span>
-                    <span id="minutes">0 m</span>
-                    <span id="seconds">0 s</span>
-                </div>
-                <a href="https://maps.app.goo.gl/rtEfCyKKuDK8vsGAA" class="button">Ver Ubicación</a>
-                <a href="https://wa.link/4qudud" class="button">Confirmar Asistencia</a>
-                <button id="music-control" onclick="toggleMusic()">Reproducir Música</button>
-            </div>
+        <img src="Invitacion.jpg" alt="Invitación" class="dinosaur-img">
+        <div id="countdown" class="countdown">
+            <span id="days">0 d</span>
+            <span id="hours">0 h</span>
+            <span id="minutes">0 m</span>
+            <span id="seconds">0 s</span>
         </div>
+        <a href="https://maps.app.goo.gl/rtEfCyKKuDK8vsGAA" class="button">Ver Ubicación</a>
+        <a href="https://wa.link/4qudud" class="button">Confirmar Asistencia</a>
+        <button id="music-control" onclick="toggleMusic()">Reproducir Música</button>
     </div>
-
-    <!-- Agregar música de fondo -->
     <audio id="bg-music" src="ChristinaPerri_AThousandYears.mp3" autoplay loop></audio>
-
     <script>
-        // Cuenta regresiva
         const eventDate = new Date("Jun 23, 2024 11:30:00").getTime();
-
         const countdownFunction = setInterval(() => {
             const now = new Date().getTime();
             const distance = eventDate - now;
-
             if (distance < 0) {
                 clearInterval(countdownFunction);
                 document.getElementById("countdown").innerHTML = "¡El evento ha comenzado!";
                 return;
             }
-
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
             document.getElementById("days").textContent = days + " d";
             document.getElementById("hours").textContent = hours + " h";
             document.getElementById("minutes").textContent = minutes + " m";
             document.getElementById("seconds").textContent = seconds + " s";
         }, 1000);
-
-        // Controlar la música
         function toggleMusic() {
             const music = document.getElementById('bg-music');
             const musicControlButton = document.getElementById('music-control');
@@ -194,5 +157,6 @@
     </script>
 </body>
 </html>
+
 
 
